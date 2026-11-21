@@ -1,0 +1,867 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* om_user_audit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-06 18:24+0000\n"
+"PO-Revision-Date: 2026-11-21 22:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: om_user_audit
+#. odoo-python
+#: code:addons/om_user_audit/models/om_user_audit_log.py:0
+msgid "%s lines in the last 24 hours"
+msgstr "%s سطر در 24 ساعت گذشته"
+
+#. module: om_user_audit
+#: model:ir.actions.report,print_report_name:om_user_audit.action_report_user_activity
+msgid "'User Activity'"
+msgstr "'فعالیت کاربر'"
+
+#. module: om_user_audit
+#: model:mail.template,body_html:om_user_audit.mail_template_sign_in
+msgid ""
+""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"<p><t t-out=\"object.name or ''\"/> (<t t-out=\"object.login or ''\"/>) signed in to <t t-out=\"object.company_id.name or ''\"/>.</p>\n"
+"<ul>\n"
+"    <t t-set=\"not_available\">N/A</t>\n"
+"    <li>When: <t t-out=\"ctx.get('om_date') and format_datetime(ctx.get('om_date'), tz=object.tz, dt_format='medium') or not_available\"/></li>\n"
+"    <li>Where: <t t-out=\"ctx.get('om_place') or not_available\"/></li>\n"
+"    <li>Address: <t t-out=\"ctx.get('om_ip') or not_available\"/></li>\n"
+"    <li>Browser: <t t-out=\"ctx.get('om_agent') or not_available\"/></li>\n"
+"</ul>\n"
+"<p style=\"margin: 16px 0px 16px 0px;\">\n"
+"    If this sign-in was not expected, change the password of this account and end its\n"
+"    sessions from Settings.\n"
+"</p>\n"
+"</div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"<p><t t-out=\"object.name or ''\"/> (<t t-out=\"object.login or ''\"/>) وارد <t t-out=\"object.company_id.name or ''\"/> شد.</p>\n"
+"<ul>\n"
+"    <t t-set=\"not_available\">نامشخص</t>\n"
+"    <li>زمان: <t t-out=\"ctx.get('om_date') and format_datetime(ctx.get('om_date'), tz=object.tz, dt_format='medium') or not_available\"/></li>\n"
+"    <li>مکان: <t t-out=\"ctx.get('om_place') or not_available\"/></li>\n"
+"    <li>آدرس IP: <t t-out=\"ctx.get('om_ip') or not_available\"/></li>\n"
+"    <li>مرورگر: <t t-out=\"ctx.get('om_agent') or not_available\"/></li>\n"
+"</ul>\n"
+"<p style=\"margin: 16px 0px 16px 0px;\">\n"
+"    اگر این ورود مورد انتظار شما نبود، رمز عبور این حساب را تغییر دهید و نشست‌های آن را\n"
+"    از بخش تنظیمات پایان دهید.\n"
+"</p>\n"
+"</div>\n"
+"        "
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_res_config_settings__om_audit_idle_minutes
+msgid "A session without a request for this long is ended. 0 never ends one."
+msgstr "نشستی که به این مدت درخواستی نداشته باشد پایان می‌یابد. 0 یعنی نشست‌ها هرگز پایان نمی‌یابند."
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__active
+msgid "Active"
+msgstr "فعال"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.view_users_form_om_user_audit
+msgid "Activity"
+msgstr "فعالیت"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__ip
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "Address"
+msgstr "آدرس IP"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_list
+msgid "All data"
+msgstr "تمام داده‌ها"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+msgid "All data but the technical"
+msgstr "تمام داده‌ها به جز داده‌های فنی"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "An email on every sign-in in the browser."
+msgstr "یک ایمیل به ازای هر ورود در مرورگر."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+msgid "Archived"
+msgstr "بایگانی شده"
+
+#. module: om_user_audit
+#: model:ir.model,name:om_user_audit.model_base
+msgid "Base"
+msgstr "پایه"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__res_config_settings__om_audit_sign_in_mail__both
+msgid "Both"
+msgstr "هر دو"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__user_agent
+msgid "Browser"
+msgstr "مرورگر"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_report_wizard_view_form
+msgid "Cancel"
+msgstr "لغو"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__changes
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_form
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Changes"
+msgstr "تغییرات"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_report_wizard__events__changes
+msgid "Changes, exports, imports and prints"
+msgstr "تغییرات، خروجی‌ها، ورودی‌ها و چاپ‌ها"
+
+#. module: om_user_audit
+#: model:ir.model,name:om_user_audit.model_res_config_settings
+msgid "Config Settings"
+msgstr "تنظیمات پیکربندی"
+
+#. module: om_user_audit
+#: model:ir.ui.menu,name:om_user_audit.menu_om_user_audit_config
+msgid "Configuration"
+msgstr "پیکربندی"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_session_view_search
+msgid "Country"
+msgstr "کشور"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__log_create
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__create
+msgid "Create"
+msgstr "ایجاد"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__create_uid
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__create_uid
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__create_date
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__create_date
+msgid "Created on"
+msgstr "ایجاد شده در"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__model_name
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__model_ids
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "Data"
+msgstr "داده‌ها"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__date
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "Date"
+msgstr "تاریخ"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Day"
+msgstr "روز"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__log_unlink
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__unlink
+msgid "Delete"
+msgstr "حذف"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Deletions"
+msgstr "عملیات حذف"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__detail
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_form
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "Detail"
+msgstr "جزئیات"
+
+#. module: om_user_audit
+#: model:ir.model,name:om_user_audit.model_res_device
+msgid "Devices"
+msgstr "دستگاه‌ها"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__display_name
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__display_name
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__display_name
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__log_write
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__write
+msgid "Edit"
+msgstr "ویرایش"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_session_view_list
+msgid "End"
+msgstr "پایان"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.view_users_form_om_user_audit
+msgid "End All Sessions"
+msgstr "پایان دادن به همه نشست‌ها"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_config_settings__om_audit_idle_minutes
+msgid "End Idle Sessions After (minutes)"
+msgstr "پایان دادن به نشست‌های غیرفعال پس از (دقیقه)"
+
+#. module: om_user_audit
+#: model:ir.actions.server,name:om_user_audit.om_user_audit_session_end_action
+msgid "End Sessions"
+msgstr "پایان دادن به نشست‌ها"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_session_view_list
+msgid "End this session? Its user is signed out."
+msgstr "به این نشست پایان داده شود؟ کاربر آن از سیستم خارج می‌شود."
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__event
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "Event"
+msgstr "رویداد"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__events
+msgid "Events"
+msgstr "رویدادها"
+
+#. module: om_user_audit
+#: model_terms:ir.actions.act_window,help:om_user_audit.om_user_audit_session_action
+msgid ""
+""
+"Every signed-in browser and device shows up here, with where it signs in "
+"from."
+msgstr "هر مرورگر و دستگاهی که وارد شده است، همراه با محل ورود در اینجا نمایش داده می‌شود."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_report_wizard_view_form
+msgid "Every user"
+msgstr "همه کاربران"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+msgid "Everyone"
+msgstr "همه"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_report_wizard__events__all
+msgid "Everything"
+msgstr "همه چیز"
+
+#. module: om_user_audit
+#: model_terms:ir.actions.act_window,help:om_user_audit.om_user_audit_rule_action
+msgid "Everything is logged"
+msgstr "همه چیز ثبت می‌شود"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__log_export
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__export
+msgid "Export"
+msgstr "خروجی"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Exports, Imports and Prints"
+msgstr "خروجی‌ها، ورودی‌ها و چاپ‌ها"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__login_failed
+msgid "Failed Sign-in"
+msgstr "ورود ناموفق"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Failed Sign-ins"
+msgstr "ورودهای ناموفق"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__date_from
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "From"
+msgstr "از"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__group_ids
+msgid "Groups"
+msgstr "گروه‌ها"
+
+#. module: om_user_audit
+#: model:ir.model,name:om_user_audit.model_ir_http
+msgid "HTTP Routing"
+msgstr "مسیریابی HTTP"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__id
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__id
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__id
+msgid "ID"
+msgstr "شناسه"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_device__om_idle
+msgid "Idle"
+msgstr "غیرفعال"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "Idle Sessions"
+msgstr "نشست‌های غیرفعال"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__log_import
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__import
+msgid "Import"
+msgstr "ورودی"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_config_settings__om_audit_keep_days
+msgid "Keep the Logs (days)"
+msgstr "مدت نگهداری لاگ‌ها (روز)"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_config_settings__om_audit_keep_sign_in_days
+msgid "Keep the Sign-ins (days)"
+msgstr "مدت نگهداری ورودها (روز)"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__write_uid
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__write_uid
+msgid "Last Updated by"
+msgstr "آخرین به‌روزرسانی توسط"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__write_date
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__write_date
+msgid "Last Updated on"
+msgstr "آخرین به‌روزرسانی در"
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_om_user_audit_report_wizard__user_ids
+msgid "Left empty, every user."
+msgstr "در صورت خالی ماندن، شامل همه کاربران می‌شود."
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_om_user_audit_rule__model_ids
+msgid "Left empty, the rule covers every kind of data but the technical ones."
+msgstr "در صورت خالی ماندن، این قاعده تمامی انواع داده‌ها به جز داده‌های فنی را پوشش می‌دهد."
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_config_settings__om_audit_lines_today
+msgid "Lines in the Last 24 Hours"
+msgstr "سطرها در 24 ساعت گذشته"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_form
+msgid "Log"
+msgstr "لاگ"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_config_settings__om_audit_log_reads
+msgid "Log Reads"
+msgstr "ثبت عملیات خواندن"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__login
+msgid "Login"
+msgstr "ورود"
+
+#. module: om_user_audit
+#: model:ir.actions.act_window,name:om_user_audit.om_user_audit_log_action
+#: model:ir.ui.menu,name:om_user_audit.menu_om_user_audit_logs
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_graph
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_list
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_pivot
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "Logs"
+msgstr "لاگ‌ها"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__method
+msgid "Method"
+msgstr "متد"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__model
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Model"
+msgstr "مدل"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__name
+msgid "Name"
+msgstr "نام"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_config_settings__om_audit_excluded_models
+msgid "Never Logged"
+msgstr "هرگز ثبت نشود"
+
+#. module: om_user_audit
+#: model:mail.template,subject:om_user_audit.mail_template_sign_in
+msgid "New sign-in: {{ object.name }}"
+msgstr "ورود جدید: {{ object.name }}"
+
+#. module: om_user_audit
+#: model_terms:ir.actions.act_window,help:om_user_audit.om_user_audit_session_action
+msgid "No open session"
+msgstr "هیچ نشست بازی وجود ندارد"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__res_config_settings__om_audit_sign_in_mail__none
+msgid "Nobody"
+msgstr "هیچ‌کس"
+
+#. module: om_user_audit
+#: model_terms:ir.actions.act_window,help:om_user_audit.om_user_audit_log_action
+msgid "Nothing logged yet"
+msgstr "هنوز چیزی ثبت نشده است"
+
+#. module: om_user_audit
+#. odoo-python
+#: code:addons/om_user_audit/wizard/om_user_audit_report_wizard.py:0
+msgid "Nothing was logged for these users over this period."
+msgstr "برای این کاربران در این بازه زمانی هیچ موردی ثبت نشده است."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "Older lines are deleted every night (0 keeps them)."
+msgstr "سطرهای قدیمی‌تر هر شب حذف می‌شوند (0 یعنی نگهداری همیشگی)."
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_res_config_settings__om_audit_keep_days
+msgid "Older lines are deleted every night. 0 keeps them forever."
+msgstr "سطرهای قدیمی‌تر هر شب حذف می‌شوند. 0 آن‌ها را برای همیشه نگه می‌دارد."
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_users__om_audit_log_count
+msgid "Om Audit Log Count"
+msgstr "تعداد لاگ‌های حسابرسی کاربر"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_users__om_session_count
+msgid "Om Session Count"
+msgstr "تعداد نشست‌های کاربر"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_config_settings__om_audit_sign_in_mail_new_only
+msgid "Only From a New Device"
+msgstr "فقط از یک دستگاه جدید"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "Only the first"
+msgstr "فقط اولین مورد"
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_res_config_settings__om_audit_sign_in_mail_new_only
+msgid ""
+""
+"Only when the user signs in from an address and a browser not seen for 90 "
+"days."
+msgstr "فقط زمانی که کاربر از آدرس و مرورگری وارد شود که در 90 روز گذشته دیده نشده است."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_form
+msgid "Open the Record"
+msgstr "باز کردن رکورد"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+msgid "Operations"
+msgstr "عملیات"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__other
+msgid "Other"
+msgstr "سایر"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__log_print
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__print
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_report_wizard_view_form
+msgid "Print"
+msgstr "چاپ"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__log_read
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__read
+msgid "Read"
+msgstr "خواندن"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Reads"
+msgstr "عملیات خواندن"
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_res_config_settings__om_audit_log_reads
+msgid ""
+""
+"Reads are the most frequent event: turn them off everywhere at once when the"
+" logs grow too fast."
+msgstr "عملیات خواندن پرشمارترین رویداد است: در صورتی که لاگ‌ها خیلی سریع افزایش می‌یابند، ثبت آن را در همه جا یکباره غیرفعال کنید."
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__res_id
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_list
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "Record"
+msgstr "رکورد"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__record_ids
+msgid "Record Ids"
+msgstr "شناسه‌های رکورد"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__res_name
+msgid "Record Name"
+msgstr "نام رکورد"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__record_count
+msgid "Records"
+msgstr "رکوردها"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Refusals"
+msgstr "موارد رد شده"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__refused
+msgid "Refused"
+msgstr "رد شده"
+
+#. module: om_user_audit
+#: model:ir.ui.menu,name:om_user_audit.menu_om_user_audit_reporting
+msgid "Reporting"
+msgstr "گزارش‌گیری"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "Retention"
+msgstr "مدت نگهداری"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "Rules"
+msgstr "قوانین"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__sequence
+msgid "Sequence"
+msgstr "توالی"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__session_end
+msgid "Session Ended"
+msgstr "نشست پایان یافت"
+
+#. module: om_user_audit
+#: model:ir.actions.act_window,name:om_user_audit.om_user_audit_session_action
+#: model:ir.ui.menu,name:om_user_audit.menu_om_user_audit_sessions
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_session_view_list
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_session_view_search
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:om_user_audit.view_users_form_om_user_audit
+msgid "Sessions"
+msgstr "نشست‌ها"
+
+#. module: om_user_audit
+#: model:ir.actions.act_window,name:om_user_audit.om_user_audit_settings_action
+#: model:ir.ui.menu,name:om_user_audit.menu_om_user_audit_settings
+msgid "Settings"
+msgstr "تنظیمات"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "Sign out a user who has done nothing for this long (0: never)."
+msgstr "خارج کردن کاربری که به این مدت فعالیتی نداشته است (0: هرگز)."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.view_users_form_om_user_audit
+msgid "Sign this user out of every browser and device?"
+msgstr "این کاربر از تمام مرورگرها و دستگاه‌ها خارج شود؟"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__login
+msgid "Sign-in"
+msgstr "ورود به سیستم"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "Sign-in Emails"
+msgstr "ایمیل‌های ورود"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_res_config_settings__om_audit_sign_in_mail
+msgid "Sign-in Emails To"
+msgstr "ارسال ایمیل‌های ورود به"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Sign-ins"
+msgstr "ورودها"
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_report_wizard__events__sign_in
+msgid "Sign-ins and sessions"
+msgstr "ورودها و نشست‌ها"
+
+#. module: om_user_audit
+#: model_terms:ir.actions.act_window,help:om_user_audit.om_user_audit_log_action
+msgid ""
+""
+"Sign-ins, reads, changes, exports, imports and prints land here as they happen.\n"
+"               With no rule, everything is logged; add rules to log only what matters."
+msgstr ""
+"ورودها، خواندن‌ها، تغییرات، خروجی‌ها، ورودی‌ها و چاپ‌ها به محض رخ دادن در اینجا ثبت می‌شوند.\n"
+"               بدون قاعده، همه چیز ثبت می‌شود؛ برای ثبت موارد مهم، قاعده ایجاد کنید."
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_res_config_settings__om_audit_keep_sign_in_days
+msgid ""
+""
+"Sign-ins, sign-outs and ended sessions. Left at 0, they follow the logs."
+msgstr "ورودها، خروج‌ها و نشست‌های پایان‌یافته. با مقدار 0، از دوره نگهداری لاگ‌ها تبعیت می‌کنند."
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__om_user_audit_log__event__logout
+msgid "Sign-out"
+msgstr "خروج از سیستم"
+
+#. module: om_user_audit
+#: model:ir.model,name:om_user_audit.model_ir_config_parameter
+msgid "System Parameter"
+msgstr "پارامتر سیستم"
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_res_config_settings__om_audit_excluded_models
+msgid ""
+""
+"Technical data never logged when no rule names it: technical names separated"
+" by commas, * for any part (ir.*, bus.*). Left empty, the default list "
+"applies."
+msgstr "داده‌های فنی که اگر در قاعده‌ای ذکر نشوند هرگز ثبت نخواهند شد: نام‌های فنی با کاما جدا می‌شوند، * برای هر بخش (ir.*, bus.*). اگر خالی باشد، لیست پیش‌فرض اعمال می‌شود."
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__res_config_settings__om_audit_sign_in_mail__admins
+msgid "The administrators"
+msgstr "مدیران سیستم"
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_om_user_audit_log__record_ids
+msgid "The first ids of the records read, printed or exported."
+msgstr "اولین شناسه‌های رکوردهای خوانده‌شده، چاپ‌شده یا خروجی‌گرفته‌شده."
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_om_user_audit_log__login
+msgid "The login typed, for a failed sign-in."
+msgstr "نام کاربری وارد شده در ورود ناموفق."
+
+#. module: om_user_audit
+#. odoo-python
+#: code:addons/om_user_audit/wizard/om_user_audit_report_wizard.py:0
+msgid "The period ends before it starts."
+msgstr "تاریخ پایان بازه قبل از تاریخ شروع است."
+
+#. module: om_user_audit
+#: model:ir.model.fields.selection,name:om_user_audit.selection__res_config_settings__om_audit_sign_in_mail__user
+msgid "The user"
+msgstr "خود کاربر"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__date_to
+msgid "To"
+msgstr "تا"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+msgid "Today"
+msgstr "امروز"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "Turn the most frequent event off everywhere at once."
+msgstr "پرشمارترین رویداد را در همه جا یکباره غیرفعال کنید."
+
+#. module: om_user_audit
+#: model:ir.model,name:om_user_audit.model_res_users
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_log__user_id
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_log_view_search
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_session_view_search
+msgid "User"
+msgstr "کاربر"
+
+#. module: om_user_audit
+#: model:ir.actions.report,name:om_user_audit.action_report_user_activity
+#: model:ir.ui.menu,name:om_user_audit.menu_om_user_audit_report
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "User Activity"
+msgstr "فعالیت کاربر"
+
+#. module: om_user_audit
+#: model:ir.actions.act_window,name:om_user_audit.om_user_audit_report_wizard_action
+#: model:ir.model,name:om_user_audit.model_om_user_audit_report_wizard
+#: model:ir.model,name:om_user_audit.model_report_om_user_audit_report_user_activity
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_report_wizard_view_form
+msgid "User Activity Report"
+msgstr "گزارش فعالیت کاربر"
+
+#. module: om_user_audit
+#: model:ir.ui.menu,name:om_user_audit.menu_om_user_audit_root
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "User Audit"
+msgstr "تدقیق کاربر"
+
+#. module: om_user_audit
+#: model:ir.model,name:om_user_audit.model_om_user_audit_log
+msgid "User Audit Log"
+msgstr "لاگ تدقیق کاربر"
+
+#. module: om_user_audit
+#: model:ir.model,name:om_user_audit.model_om_user_audit_rule
+msgid "User Audit Rule"
+msgstr "قاعده تدقیق کاربر"
+
+#. module: om_user_audit
+#: model:ir.actions.server,name:om_user_audit.ir_cron_clean_logs_ir_actions_server
+msgid "User Audit: Delete Old Logs"
+msgstr "تدقیق کاربر: حذف لاگ‌های قدیمی"
+
+#. module: om_user_audit
+#: model:ir.actions.server,name:om_user_audit.ir_cron_end_idle_sessions_ir_actions_server
+msgid "User Audit: End Idle Sessions"
+msgstr "تدقیق کاربر: پایان نشست‌های غیرفعال"
+
+#. module: om_user_audit
+#: model:mail.template,name:om_user_audit.mail_template_sign_in
+msgid "User Audit: Sign-in"
+msgstr "تدقیق کاربر: ورود"
+
+#. module: om_user_audit
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_report_wizard__user_ids
+#: model:ir.model.fields,field_description:om_user_audit.field_om_user_audit_rule__user_ids
+msgid "Users"
+msgstr "کاربران"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+msgid "What"
+msgstr "چه داده‌ای"
+
+#. module: om_user_audit
+#: model:ir.actions.act_window,name:om_user_audit.om_user_audit_rule_action
+#: model:ir.ui.menu,name:om_user_audit.menu_om_user_audit_rules
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_list
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "What to Log"
+msgstr "موارد جهت ثبت"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+msgid "Who"
+msgstr "چه کسی"
+
+#. module: om_user_audit
+#: model:ir.model.fields,help:om_user_audit.field_om_user_audit_rule__group_ids
+msgid "With neither users nor groups, the rule covers everyone."
+msgstr "بدون کاربر یا گروه، این قاعده همه را شامل می‌شود."
+
+#. module: om_user_audit
+#: model_terms:ir.actions.act_window,help:om_user_audit.om_user_audit_rule_action
+msgid ""
+""
+"With no rule, every read, change, export, import and print of every business data\n"
+"               is logged. Add a rule to log only what it names: some data, some users, some\n"
+"               operations."
+msgstr ""
+"بدون قاعده، تمام خواندن‌ها، تغییرات، خروجی‌ها، ورودی‌ها و چاپ‌های تمامی داده‌های کاری\n"
+"               ثبت می‌شود. قاعده‌ای اضافه کنید تا فقط موارد تعیین‌شده ثبت شود: برخی داده‌ها، برخی کاربران، برخی\n"
+"               عملیات."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid "With no rule, everything but the technical data below."
+msgstr "بدون قاعده، همه چیز به جز داده‌های فنی زیر."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+msgid ""
+""
+"With no rule, everything is logged but the technical data listed in the\n"
+"                        settings. As soon as one rule exists, only what the rules name is logged.\n"
+"                        Sign-ins are always logged."
+msgstr ""
+"بدون قاعده، همه چیز به جز داده‌های فنی ذکر شده در\n"
+"                        تنظیمات ثبت می‌شود. به محض ایجاد یک قاعده، تنها موارد ذکر شده در قوانین ثبت می‌شوند.\n"
+"                        ورودها همیشه ثبت می‌شوند."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.om_user_audit_rule_view_form
+msgid "e.g. Invoices, every change"
+msgstr "مثال: فاکتورها، هر تغییر"
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid ""
+""
+"lines are printed: narrow the period or\n"
+"                        the users."
+msgstr ""
+"سطر چاپ می‌شود: بازه زمانی یا\n"
+"                        کاربران را محدودتر کنید."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.res_config_settings_view_form
+msgid ""
+""
+"lines in the\n"
+"                                last 24 hours."
+msgstr ""
+"سطر در\n"
+"                                24 ساعت گذشته."
+
+#. module: om_user_audit
+#: model_terms:ir.ui.view,arch_db:om_user_audit.report_user_activity
+msgid "to"
+msgstr "تا"
