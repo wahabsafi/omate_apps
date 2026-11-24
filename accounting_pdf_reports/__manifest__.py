@@ -1,6 +1,6 @@
 {
     'name': 'Odoo 20 Accounting Financial Reports',
-    'version': '2.1.2',
+    'version': '2.1.4',
     'category': 'Invoicing Management',
     'description': 'Accounting Reports For Odoo 20, Odoo 20 Financial Reports, Accounting Financial Reports, '
                    'Financial Statements, Accounting PDF Reports, Annual Report, Balance Sheet, Profit and Loss, '
@@ -17,7 +17,7 @@
     'maintainer': 'Odoo Mates',
     'support': 'odoomates@gmail.com',
     'website': 'https://www.youtube.com/watch?v=yA4NLwOLZms',
-    'depends': ['account', 'om_print_journal_entry'],
+    'depends': ['account'],
     'live_test_url': 'https://www.youtube.com/watch?v=yA4NLwOLZms',
     'data': [
         'security/ir.access.csv',
@@ -28,6 +28,7 @@
         'views/settings.xml',
         'views/account_account_views.xml',
         'wizard/account_report_common_view.xml',
+        'wizard/account_financial_report_menu.xml',
         'wizard/partner_ledger.xml',
         'wizard/general_ledger.xml',
         'wizard/trial_balance.xml',

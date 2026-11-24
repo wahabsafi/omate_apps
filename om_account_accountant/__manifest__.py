@@ -1,6 +1,6 @@
 {
     'name': 'Odoo 20 Accounting Community',
-    'version': '1.7.0',
+    'version': '1.7.2',
     'category': 'Accounting',
     'summary': 'Annual Report, Bank Reconciliation Statement, Accounting Reports, '
                'Asset Management and Budget, Recurring Payments, '
@@ -21,6 +21,7 @@
     'support': 'odoomates@gmail.com',
     'depends': [
         'accounting_pdf_reports',
+        'om_print_journal_entry',
         'om_account_asset',
         'om_account_budget',
         'om_fiscal_year',

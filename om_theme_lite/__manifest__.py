@@ -1,6 +1,6 @@
 {
     'name': 'Odoo Mates Theme Lite',
-    'version': '20.0.1.0.3',
+    'version': '20.0.1.0.4',
     'category': 'Productivity',
     'summary': 'Backend Theme Odoo 20, Odoo 20 UI Theme, Backend UI, App Launcher, Odoo 20 Theme',
     'description': """
@@ -18,7 +18,7 @@ list column widths that are remembered.
     'author': 'Odoo Mates',
     'support': 'odoomates@gmail.com',
     'live_test_url': 'https://www.youtube.com/watch?v=2WOTuBSjX20',
-    'depends': ['web', 'mail', 'base_setup'],
+    'depends': ['web', 'mail', 'base_setup', 'om_chatter_position'],
     'data': [
         'data/ir_actions_client.xml',
         'views/res_users_views.xml',
